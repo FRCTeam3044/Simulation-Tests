@@ -1,0 +1,85 @@
+{
+  "MainWindow": {
+    "GLOBAL": {
+      "height": "2071",
+      "maximized": "1",
+      "style": "1",
+      "userScale": "5",
+      "width": "3840",
+      "xpos": "0",
+      "ypos": "29"
+    }
+  },
+  "Window": {
+    "###/LiveWindow/DriveSubsystem": {
+      "Collapsed": "0",
+      "Pos": "60,59",
+      "Size": "342,134"
+    },
+    "###/LiveWindow/Ungrouped/DifferentialDrive[1]": {
+      "Collapsed": "0",
+      "Pos": "899,873",
+      "Size": "300,350"
+    },
+    "###/LiveWindow/Ungrouped/PWMSparkMax[0]": {
+      "Collapsed": "0",
+      "Pos": "898,786",
+      "Size": "294,72"
+    },
+    "###/LiveWindow/Ungrouped/PWMSparkMax[1]": {
+      "Collapsed": "0",
+      "Pos": "901,701",
+      "Size": "294,72"
+    },
+    "###/SmartDashboard/Field": {
+      "Collapsed": "0",
+      "Pos": "1848,38",
+      "Size": "1986,1075"
+    },
+    "###FMS": {
+      "Collapsed": "0",
+      "Pos": "6,675",
+      "Size": "302,304"
+    },
+    "###Joysticks": {
+      "Collapsed": "0",
+      "Pos": "8,40",
+      "Size": "1516,386"
+    },
+    "###NetworkTables": {
+      "Collapsed": "0",
+      "Pos": "10,434",
+      "Size": "937,231"
+    },
+    "###Other Devices": {
+      "Collapsed": "0",
+      "Pos": "1211,438",
+      "Size": "312,868"
+    },
+    "###PWM Outputs": {
+      "Collapsed": "0",
+      "Pos": "969,71",
+      "Size": "131,90"
+    },
+    "###System Joysticks": {
+      "Collapsed": "0",
+      "Pos": "336,676",
+      "Size": "354,362"
+    },
+    "###Timing": {
+      "Collapsed": "0",
+      "Pos": "964,441",
+      "Size": "241,187"
+    },
+    "Debug##Default": {
+      "Collapsed": "0",
+      "Pos": "60,60",
+      "Size": "400,400"
+    },
+    "Robot State": {
+      "Collapsed": "0",
+      "Pos": "5,20",
+      "Size": "57,87"
+    }
+  }
+}

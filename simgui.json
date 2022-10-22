@@ -32,6 +32,11 @@
       "/SmartDashboard/Field": "Field2d"
     },
     "windows": {
+      "/LiveWindow/Ungrouped/DifferentialDrive[1]": {
+        "window": {
+          "visible": true
+        }
+      },
       "/LiveWindow/Ungrouped/PWMSparkMax[0]": {
         "window": {
           "visible": true
