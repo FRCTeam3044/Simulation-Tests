@@ -42,8 +42,8 @@ public class RobotContainer {
   private final DriveSubsystem m_robotDrive = new DriveSubsystem();
 
   // The driver's controller
-  PS4Controller m_driverController =
-      new PS4Controller(Constants.OIConstants.kDriverControllerPort);
+  XboxController m_driverController =
+      new XboxController(Constants.OIConstants.kDriverControllerPort);
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
@@ -132,7 +132,7 @@ public class RobotContainer {
     // A Pathweaver 2 ball blue low trajectory
     String trajectoryJSON;
     if(RobotBase.isSimulation()) {
-        trajectoryJSON = "C:/Users/Control-Dev/Documents/GitHub/sim-test/Simulation-Test/PathWeaver/output/low-b-2.wpilib.json";
+        trajectoryJSON = "C:/Users/robot/Documents/GitHub/Simulation-Tests/Simulation-Test/PathWeaver/output/low-b-2.wpilib.json";
     } else {
         trajectoryJSON = "src/main/deploy/paths.low-b-2.wpilib.json";
     }
