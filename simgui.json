@@ -37,16 +37,6 @@
           "visible": true
         }
       },
-      "/LiveWindow/Ungrouped/PWMSparkMax[0]": {
-        "window": {
-          "visible": true
-        }
-      },
-      "/LiveWindow/Ungrouped/PWMSparkMax[1]": {
-        "window": {
-          "visible": true
-        }
-      },
       "/SmartDashboard/Field": {
         "Robot": {
           "arrowColor": [

@@ -11,14 +11,9 @@
     }
   },
   "Window": {
-    "###/LiveWindow/DriveSubsystem": {
-      "Collapsed": "0",
-      "Pos": "60,59",
-      "Size": "342,134"
-    },
     "###/LiveWindow/Ungrouped/DifferentialDrive[1]": {
       "Collapsed": "0",
-      "Pos": "899,873",
+      "Pos": "886,873",
       "Size": "300,350"
     },
     "###/LiveWindow/Ungrouped/PWMSparkMax[0]": {

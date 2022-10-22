@@ -87,20 +87,20 @@ public class DriveSubsystem extends SubsystemBase {
 
     if (RobotBase.isSimulation()) { // If our robot is simulated
       // This class simulates our drivetrain's motion around the field.
-      m_drivetrainSimulator =
+      /*m_drivetrainSimulator =
           new DifferentialDrivetrainSim(
               DriveConstants.kDrivetrainPlant,
               DriveConstants.kDriveGearbox,
               DriveConstants.kDriveGearing,
               DriveConstants.kTrackwidthMeters,
               DriveConstants.kWheelDiameterMeters / 2.0,
-              VecBuilder.fill(0, 0, 0.0001, 0.1, 0.1, 0.005, 0.005));
-            /*m_drivetrainSimulator = DifferentialDrivetrainSim.createKitbotSim(
+              VecBuilder.fill(0, 0, 0.0001, 0.1, 0.1, 0.005, 0.005));*/
+        m_drivetrainSimulator = DifferentialDrivetrainSim.createKitbotSim(
             KitbotMotor.kDualCIMPerSide, // 2 CIMs per side.
             KitbotGearing.k10p71,        // 10.71:1
             KitbotWheelSize.SixInch,     // 6" diameter wheels.
             null                         // No measurement noise.
-            );*/
+            );
 
       // The encoder and gyro angle sims let us set simulated sensor readings
       m_leftEncoderSim = new EncoderSim(m_leftEncoder);
@@ -193,7 +193,13 @@ public class DriveSubsystem extends SubsystemBase {
    * @param rot the commanded rotation
    */
   public void arcadeDrive(double fwd, double rot) {
+    if(Math.abs(fwd) < DriveConstants.kDeadband){fwd = 0;}
+    if(Math.abs(rot) < DriveConstants.kDeadband){rot = 0;}
     m_drive.arcadeDrive(fwd, rot);
+  }
+
+  public void tankDrive(double left, double right) {
+      m_drive.tankDrive(0.2*Math.tan(1.4*left), 0.2*Math.tan(1.4*right));
   }
 
   /**

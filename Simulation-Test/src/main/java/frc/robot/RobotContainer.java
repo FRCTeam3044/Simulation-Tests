@@ -13,8 +13,12 @@ import edu.wpi.first.math.geometry.Translation2d;
 import edu.wpi.first.math.trajectory.Trajectory;
 import edu.wpi.first.math.trajectory.TrajectoryConfig;
 import edu.wpi.first.math.trajectory.TrajectoryGenerator;
+import edu.wpi.first.math.trajectory.TrajectoryUtil;
 import edu.wpi.first.math.trajectory.constraint.DifferentialDriveVoltageConstraint;
+import edu.wpi.first.wpilibj.DriverStation;
+import edu.wpi.first.wpilibj.Filesystem;
 import edu.wpi.first.wpilibj.PS4Controller;
+import edu.wpi.first.wpilibj.RobotBase;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.XboxController.Button;
 import frc.robot.subsystems.DriveSubsystem;
@@ -22,6 +26,9 @@ import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.RamseteCommand;
 import edu.wpi.first.wpilibj2.command.RunCommand;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
+
+import java.io.IOException;
+import java.nio.file.Path;
 import java.util.List;
 
 /**
@@ -56,6 +63,10 @@ public class RobotContainer {
                 m_robotDrive.arcadeDrive(
                     -m_driverController.getLeftY(), m_driverController.getRightX()),
             m_robotDrive));
+
+                /*m_robotDrive.tankDrive(
+                    -m_driverController.getLeftY(), -m_driverController.getRightY()),
+            m_robotDrive));*/
   }
 
   /**
@@ -94,7 +105,7 @@ public class RobotContainer {
                 Constants.DriveConstants.kvVoltSecondsPerMeter,
                 Constants.DriveConstants.kaVoltSecondsSquaredPerMeter),
             Constants.DriveConstants.kDriveKinematics,
-            7);
+            10);
 
     // Create config for trajectory
     TrajectoryConfig config =
@@ -118,9 +129,26 @@ public class RobotContainer {
             // Pass config
             config);
 
+    // A Pathweaver 2 ball blue low trajectory
+    String trajectoryJSON;
+    if(RobotBase.isSimulation()) {
+        trajectoryJSON = "C:/Users/Control-Dev/Documents/GitHub/sim-test/Simulation-Test/PathWeaver/output/low-b-2.wpilib.json";
+    } else {
+        trajectoryJSON = "src/main/deploy/paths.low-b-2.wpilib.json";
+    }
+
+    Trajectory TBBLtrajectory = new Trajectory();
+    try {
+        Path trajectoryPath = Filesystem.getDeployDirectory().toPath().resolve(trajectoryJSON);
+        TBBLtrajectory = TrajectoryUtil.fromPathweaverJson(trajectoryPath);
+    } catch (IOException ex) {
+        DriverStation.reportError("Unable to open trajectory: " + trajectoryJSON, ex.getStackTrace());
+    }
+
     RamseteCommand ramseteCommand =
         new RamseteCommand(
-            exampleTrajectory,
+            //exampleTrajectory,
+            TBBLtrajectory,
             m_robotDrive::getPose,
             new RamseteController(
                 Constants.AutoConstants.kRamseteB, Constants.AutoConstants.kRamseteZeta),

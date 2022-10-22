@@ -20,6 +20,8 @@ import edu.wpi.first.math.system.plant.LinearSystemId;
  */
 public final class Constants {
   public static final class DriveConstants {
+    public static double kDeadband = 0.05;
+
     public static final int kLeftMotor1Port = 0;
     public static final int kLeftMotor2Port = 1;
     public static final int kRightMotor1Port = 2;
