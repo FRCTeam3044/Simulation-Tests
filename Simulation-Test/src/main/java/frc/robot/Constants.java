@@ -20,7 +20,7 @@ import edu.wpi.first.math.system.plant.LinearSystemId;
  */
 public final class Constants {
   public static final class DriveConstants {
-    public static double kDeadband = 0.05;
+    public static double kDeadband = 0.11;
 
     public static final int kLeftMotor1Port = 0;
     public static final int kLeftMotor2Port = 1;
@@ -69,7 +69,7 @@ public final class Constants {
 
     // Example values only -- use what's on your physical robot!
     public static final DCMotor kDriveGearbox = DCMotor.getCIM(2);
-    public static final double kDriveGearing = 8;
+    public static final double kDriveGearing = 10.71;
 
     // Example value only - as above, this must be tuned for your drive!
     public static final double kPDriveVel = 8.5;

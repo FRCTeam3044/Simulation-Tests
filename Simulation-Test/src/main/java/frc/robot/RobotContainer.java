@@ -17,7 +17,6 @@ import edu.wpi.first.math.trajectory.TrajectoryUtil;
 import edu.wpi.first.math.trajectory.constraint.DifferentialDriveVoltageConstraint;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.Filesystem;
-import edu.wpi.first.wpilibj.PS4Controller;
 import edu.wpi.first.wpilibj.RobotBase;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.XboxController.Button;
@@ -132,7 +131,7 @@ public class RobotContainer {
     // A Pathweaver 2 ball blue low trajectory
     String trajectoryJSON;
     if(RobotBase.isSimulation()) {
-        trajectoryJSON = "C:/Users/robot/Documents/GitHub/Simulation-Tests/Simulation-Test/PathWeaver/output/low-b-2.wpilib.json";
+        trajectoryJSON = "C:/Users/Control-Dev/Documents/GitHub/sim-test/Simulation-Test/PathWeaver/output/low-b-2.wpilib.json";
     } else {
         trajectoryJSON = "src/main/deploy/paths.low-b-2.wpilib.json";
     }

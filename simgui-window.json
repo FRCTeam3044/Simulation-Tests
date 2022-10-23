@@ -13,12 +13,12 @@
   "Window": {
     "###/LiveWindow/Ungrouped/DifferentialDrive[1]": {
       "Collapsed": "0",
-      "Pos": "886,873",
-      "Size": "300,350"
+      "Pos": "381,664",
+      "Size": "322,368"
     },
     "###/LiveWindow/Ungrouped/PWMSparkMax[0]": {
       "Collapsed": "0",
-      "Pos": "898,786",
+      "Pos": "320,1642",
       "Size": "294,72"
     },
     "###/LiveWindow/Ungrouped/PWMSparkMax[1]": {
@@ -28,23 +28,23 @@
     },
     "###/SmartDashboard/Field": {
       "Collapsed": "0",
-      "Pos": "1848,38",
-      "Size": "1986,1075"
+      "Pos": "1573,38",
+      "Size": "2261,1230"
     },
     "###FMS": {
       "Collapsed": "0",
-      "Pos": "6,675",
-      "Size": "302,304"
+      "Pos": "8,435",
+      "Size": "495,218"
     },
     "###Joysticks": {
       "Collapsed": "0",
       "Pos": "8,40",
-      "Size": "1516,386"
+      "Size": "1516,392"
     },
     "###NetworkTables": {
       "Collapsed": "0",
-      "Pos": "10,434",
-      "Size": "937,231"
+      "Pos": "2893,1273",
+      "Size": "937,490"
     },
     "###Other Devices": {
       "Collapsed": "0",
@@ -56,14 +56,29 @@
       "Pos": "969,71",
       "Size": "131,90"
     },
+    "###Plot <0>": {
+      "Collapsed": "0",
+      "Pos": "16,1286",
+      "Size": "1109,724"
+    },
+    "###Plot <1>": {
+      "Collapsed": "0",
+      "Pos": "1133,1285",
+      "Size": "941,310"
+    },
+    "###Plot <2>": {
+      "Collapsed": "0",
+      "Pos": "1134,1601",
+      "Size": "945,408"
+    },
     "###System Joysticks": {
       "Collapsed": "0",
-      "Pos": "336,676",
+      "Pos": "9,662",
       "Size": "354,362"
     },
     "###Timing": {
       "Collapsed": "0",
-      "Pos": "964,441",
+      "Pos": "508,436",
       "Size": "241,187"
     },
     "Debug##Default": {
@@ -73,8 +88,8 @@
     },
     "Robot State": {
       "Collapsed": "0",
-      "Pos": "5,20",
-      "Size": "57,87"
+      "Pos": "755,435",
+      "Size": "161,159"
     }
   }
 }

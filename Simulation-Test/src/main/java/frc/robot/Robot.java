@@ -7,6 +7,7 @@ package frc.robot;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.simulation.BatterySim;
 import edu.wpi.first.wpilibj.simulation.RoboRioSim;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 
 /**
@@ -36,6 +37,8 @@ public class Robot extends TimedRobot {
     // resistance.
     double drawCurrent = m_robotContainer.getRobotDrive().getDrawnCurrentAmps();
     double loadedVoltage = BatterySim.calculateDefaultBatteryLoadedVoltage(drawCurrent);
+    SmartDashboard.putNumber("Bat. Volt. ", loadedVoltage);
+    SmartDashboard.putNumber("Current Draw", drawCurrent);
     RoboRioSim.setVInVoltage(loadedVoltage);
   }
 
