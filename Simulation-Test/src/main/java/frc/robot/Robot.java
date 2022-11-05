@@ -4,6 +4,7 @@
 
 package frc.robot;
 
+import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.simulation.BatterySim;
 import edu.wpi.first.wpilibj.simulation.RoboRioSim;
@@ -27,6 +28,7 @@ public class Robot extends TimedRobot {
     // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
     // autonomous chooser on the dashboard.
     m_robotContainer = new RobotContainer();
+    CameraServer.startAutomaticCapture();
   }
 
   @Override
@@ -37,7 +39,7 @@ public class Robot extends TimedRobot {
     // resistance.
     double drawCurrent = m_robotContainer.getRobotDrive().getDrawnCurrentAmps();
     double loadedVoltage = BatterySim.calculateDefaultBatteryLoadedVoltage(drawCurrent);
-    SmartDashboard.putNumber("Bat. Volt. ", loadedVoltage);
+    SmartDashboard.putNumber("Bat. Volt.", loadedVoltage);
     SmartDashboard.putNumber("Current Draw", drawCurrent);
     RoboRioSim.setVInVoltage(loadedVoltage);
   }
